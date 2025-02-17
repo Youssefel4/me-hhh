@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="اتصل بنا في Tools AI لأي استفسارات أو طلبات.">
+    <meta name="keywords" content="اتصل بنا, دعم العملاء, Tools AI, المساعدة">
+    <title>اتصل بنا | Tools AI</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            direction: rtl;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .store-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #f4f4f4;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-links li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            width: 50%;
+            margin: 100px auto 50px;
+            padding: 20px;
+            background-color: rgb(250, 250, 250);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form label {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #243027;
+            color: white;
+            padding: 12px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .contact-form button:hover {
+            background-color: #218838;
+        }
+
+        /* Map Section */
+        .map-container {
+            width: 50%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .contact-container, .map-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="store-name">Tools AI</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contact-container">
+    <h1>اتصل بنا</h1>
+    <p>نحن هنا لمساعدتك! لا تتردد في مراسلتنا.</p>
+
+    <form action="#" method="POST" class="contact-form">
+        <label for="name">الاسم</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">الرسالة</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">إرسال الرسالة</button>
+    </form>
+</section>
+
+<!-- قسم الخريطة -->
+<section class="map-container">
+    <h2>موقعنا على الخريطة</h2>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952747.898061819!2d-1.8603808831794433!3d31.691399050809817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b88619651c58d%3A0xd9d39381c42cffc3!2z2KfZhNmF2LrYsdio!5e0!3m2!1sar!2sma!4v1739791031132!5m2!1sar!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+        <allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+
+        // تحذير عند إرسال النموذج
+        document.querySelector(".contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("تم إرسال رسالتك بنجاح!");
+        });
+    });
+</script>
+
+</body>
+</html>

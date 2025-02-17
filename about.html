@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+        .store-name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #f4f4f4;
+            text-align: left;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .intro h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #2575fc;
+        }
+        .intro p {
+            font-size: 18px;
+            color: #666;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .column {
+            width: 48%;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .column:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .column h3 {
+            font-size: 24px;
+            color: #2575fc;
+            margin-bottom: 15px;
+        }
+        .column p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .journey {
+            margin-top: 30px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .journey:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .journey h3 {
+            font-size: 24px;
+            color: #2575fc;
+            margin-bottom: 15px;
+        }
+        .journey p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Slow Motion Scroll Effect */
+        .slow-motion {
+            transition: transform 1.5s ease, opacity 1.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <h1 class="store-name">Tools AI</h1>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container slow-motion">
+        <section class="intro">
+            <h2>About Me</h2>
+            <h1>Hello, I'm Youssef</h1>
+            <p>I'm passionate about technology and creating amazing digital experiences.</p>
+        </section>
+        
+        <section class="content">
+            <div class="column slow-motion">
+                <h3>Background</h3>
+                <p>I'm a developer who loves building things for the web. I enjoy learning new technologies and sharing my knowledge with others.</p>
+            </div>
+            <div class="column slow-motion">
+                <h3>Interests</h3>
+                <p>When I'm not coding, you can find me exploring new technologies, reading tech blogs, and working on personal projects.</p>
+            </div>
+        </section>
+        
+        <section class="journey slow-motion">
+            <h3>My Journey</h3>
+            <p>I started my journey in web development with a passion for creating things that live on the internet. I focus on writing clean, elegant, and efficient code.</p>
+            <p>I'm always eager to learn new technologies and techniques to improve my skills and create better user experiences.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; HAHA YEH ITS ME Youssef. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Slow Motion Scroll Effect
+        document.addEventListener("scroll", () => {
+            const elements = document.querySelectorAll(".slow-motion");
+            elements.forEach((element) => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                } else {
+                    element.style.opacity = "0";
+                    element.style.transform = "translateY(50px)";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
